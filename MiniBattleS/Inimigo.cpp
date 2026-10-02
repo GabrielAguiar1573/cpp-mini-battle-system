@@ -15,8 +15,12 @@ int Inimigo::VidaInimigo(){
 	return vida;
 }
 
-void Inimigo::Atacar(Player* alvo) {
+bool Inimigo::Atacar(Player* alvo) {
+	if (!alvo->EstaVivo()) {
+		return false;
+	}
 	alvo->ReceberDano(dano);
+	return true;
 }
 
 void Inimigo::ReceberDano(int dano) {

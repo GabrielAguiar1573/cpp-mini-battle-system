@@ -25,4 +25,18 @@ int main() {
 
 	pocao.Usar(&gabriel);
 	std::cout << gabriel.VidaPlayer() << std::endl;
+
+	if (gabriel.Atacar(&goblin)) {
+		std::cout << "Ataque realizado! Vida do " << goblin.NomeInimigo() << ": " << goblin.VidaInimigo() << std::endl;
+	}
+	else {
+		std::cout << "O alvo ja esta morto!" << std::endl;
+	}
+
+	if (gabriel.Atacar(&goblin)) {
+		std::cout << "Ataque realizado! Vida do " << goblin.NomeInimigo()<< ": "<< goblin.VidaInimigo() << std::endl;
+	}
+	else {
+		std::cout << "O alvo ja esta morto!" << std::endl;
+	}
 }

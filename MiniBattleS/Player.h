@@ -11,7 +11,7 @@ private:
 	int dano;
 public:
 	Player(std::string, int, int);
-	void Atacar(Inimigo* alvo);
+	bool Atacar(Inimigo* alvo);
 	void ReceberDano(int dano);
 	void Curar(int valor);
 	std::string NomePlayer();

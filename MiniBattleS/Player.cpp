@@ -8,8 +8,12 @@ Player::Player(std::string nomePlayer, int vidaMaximaPlayer, int danoPlayer) {
 	vida = vidaMaxima;
 }
 
-void Player::Atacar(Inimigo* alvo) {
+bool Player::Atacar(Inimigo* alvo) {
+	if (!alvo -> EstaVivo()) {
+		return false;
+	}
 	alvo -> ReceberDano(dano);
+	return true;
 }
 
 void Player::ReceberDano(int dano) {

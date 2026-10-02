@@ -10,7 +10,7 @@ private:
 	int dano;
 public:
 	Inimigo(std::string, int, int);
-	void Atacar(Player* alvo);
+	bool Atacar(Player* alvo);
 	void ReceberDano(int dano);
 	bool EstaVivo();
 	std::string NomeInimigo();
